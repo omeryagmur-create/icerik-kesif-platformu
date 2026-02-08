@@ -20,26 +20,20 @@ export function WaitlistHero() {
     const mouseY = useMotionValue(0);
 
     const fetchCount = async () => {
-        if (!GOOGLE_SCRIPT_URL || !GOOGLE_SCRIPT_URL.startsWith('http')) {
-            console.warn('WaitlistHero: Google Script URL is missing or invalid.');
-            return;
-        }
-
         try {
-            // CORS problemlerini önlemek için cache: 'no-store' ekliyoruz
-            const response = await fetch(GOOGLE_SCRIPT_URL, {
+            // Doğrudan Google'a değil, kendi Proxy API'mize istek atıyoruz (CORS çözümüdür)
+            const response = await fetch('/api/count', {
                 method: 'GET',
                 cache: 'no-store'
             });
 
-            if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+            if (!response.ok) throw new Error(`Server error! status: ${response.status}`);
 
             const data = await response.json();
             if (data && typeof data.count === 'number') {
                 setSubscriberCount(data.count);
             }
         } catch (error) {
-            // Hatayı yakalıyoruz ki uygulama çökmesin (Next.js overlay çıkmasın)
             console.error('WaitlistHero: Count fetch failed:', error);
         }
     };

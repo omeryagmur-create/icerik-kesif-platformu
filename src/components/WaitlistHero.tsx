@@ -8,6 +8,8 @@ import { useTranslations, useLocale } from 'next-intl';
 
 // NOT: Bu URL'i Google Apps Script'ten aldığınız URL ile değiştirin.
 // NEXT_PUBLIC_GOOGLE_SCRIPT_URL ortam değişkeni Vercel panelinden de tanımlanmalıdır.
+const GOOGLE_SCRIPT_URL = process.env.NEXT_PUBLIC_GOOGLE_SCRIPT_URL || '';
+
 export function WaitlistHero() {
     const t = useTranslations('Hero');
     const locale = useLocale();

@@ -1,0 +1,59 @@
+{
+    "Hero": {
+        "badge": "Next Gen Entdeckung 2024",
+        "titlePrefix": "Treten Sie der",
+        "titleWaitlist": "Warteliste bei",
+        "description": "Gehen Sie über Algorithmen hinaus. Entdecken Sie Ihren <highlight>Buch-, Film- und Musikgeschmack</highlight> auf einer einzigen intelligenten Plattform.",
+        "emailPlaceholder": "vip-dev@discovery.com",
+        "cta": "Warteliste beitreten",
+        "successTitle": "Sie sind auf der Warteliste 🚀",
+        "successMessage": "Wir haben Ihren Platz reserviert. Bleiben Sie dran für den Plattformstart.",
+        "countPrefix": "Bisher",
+        "countSuffix": "Personen beigetreten",
+        "scroll": "Nach unten scrollen"
+    },
+    "Discover": {
+        "title": "Was ist unser Ziel?",
+        "description": "Wir verhindern, dass Algorithmen Sie in Schubladen stecken.\nEin <highlight>befreiendes</highlight> Entdeckungserlebnis, das Ihren wahren Geschmack anspricht.",
+        "video": {
+            "cta": "Trailer ansehen"
+        },
+        "features": {
+            "books": {
+                "title": "Persönliche Bibliothek",
+                "desc": "Entdecken Sie Werke, die zu Ihrer Denkweise passen, nicht nur das, was populär ist."
+            },
+            "movies": {
+                "title": "Filmentdeckung",
+                "desc": "Finden Sie Ihre neue Lieblingsserie mit intelligenten Empfehlungen über Genres hinweg."
+            },
+            "music": {
+                "title": "Musikalische Reise",
+                "desc": "Musik, die Ihre Stimmung und Ihren tiefen Geschmack anspricht, fernab vom Gewöhnlichen."
+            }
+        }
+    },
+    "Support": {
+        "title": "Unabhängigen Entwickler unterstützen",
+        "description": "Dieses Projekt wird mit Community-Unterstützung und Leidenschaft entwickelt, nicht mit Werbung oder großem Kapital. Jede Kaffeespende beschleunigt die Entwicklung und sorgt für qualitativ hochwertigere Funktionen.",
+        "features": {
+            "dev": "Sie können am Entwicklungsprozess teilnehmen",
+            "beta": "Nehmen Sie an Beta-Tests vor dem Start teil"
+        },
+        "coffee": {
+            "title": "Kauf mir einen Kaffee",
+            "desc": "Sie können die Plattform Buy Me a Coffee nutzen, um zu unterstützen.",
+            "cta": "Unterstützen (Kaffee)"
+        }
+    },
+    "Footer": {
+        "rights": "© 2026. Alle Rechte vorbehalten.",
+        "brand": "Content Discovery Plattform",
+        "links": {
+            "twitter": "Twitter (X)",
+            "instagram": "Instagram",
+            "discord": "Discord",
+            "privacy": "Datenschutz"
+        }
+    }
+}

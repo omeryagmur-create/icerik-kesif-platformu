@@ -1,0 +1,59 @@
+{
+    "Hero": {
+        "badge": "Next Gen Discovery 2024",
+        "titlePrefix": "Join the",
+        "titleWaitlist": "Waitlist",
+        "description": "Go beyond algorithms. Discover your <highlight>books, movies, and music</highlight> taste on a single smart platform.",
+        "emailPlaceholder": "vip-dev@discovery.com",
+        "cta": "Join Waitlist",
+        "successTitle": "You're on the waitlist 🚀",
+        "successMessage": "We've saved your spot. Stay tuned for the platform launch.",
+        "countPrefix": "So far",
+        "countSuffix": "people have joined",
+        "scroll": "Scroll Down"
+    },
+    "Discover": {
+        "title": "What is our Goal?",
+        "description": "We stop algorithms from trapping you in boxes.\nA <highlight>liberating</highlight> discovery experience that appeals to your true tastes.",
+        "video": {
+            "cta": "Watch Trailer"
+        },
+        "features": {
+            "books": {
+                "title": "Personal Library",
+                "desc": "Discover works that fit your mindset, not just what's popular."
+            },
+            "movies": {
+                "title": "Cinematic Discovery",
+                "desc": "Find your new favorite series with smart recommendations crossing genres."
+            },
+            "music": {
+                "title": "Musical Journey",
+                "desc": "Music that appeals to your mood and deep tastes, far from ordinary."
+            }
+        }
+    },
+    "Support": {
+        "title": "Support Independent Developer",
+        "description": "This project is developed with community support and passion, not ads or big capital. Every coffee donation speeds up development and ensures higher quality features.",
+        "features": {
+            "dev": "You can be involved in the development process",
+            "beta": "Join pre-launch beta tests"
+        },
+        "coffee": {
+            "title": "Buy Me a Coffee",
+            "desc": "You can use the Buy Me a Coffee platform to support.",
+            "cta": "Support (Coffee)"
+        }
+    },
+    "Footer": {
+        "rights": "© 2026. All rights reserved.",
+        "brand": "Content Discovery Platform",
+        "links": {
+            "twitter": "Twitter (X)",
+            "instagram": "Instagram",
+            "discord": "Discord",
+            "privacy": "Privacy"
+        }
+    }
+}

@@ -1,8 +1,11 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import { useTranslations } from 'next-intl';
 
 export function Discover() {
+    const t = useTranslations('Discover');
+
     return (
         <section id="discover" className="relative py-32 px-6 overflow-hidden">
             {/* Background decorative elements */}
@@ -17,7 +20,7 @@ export function Discover() {
                         viewport={{ once: true }}
                         className="text-4xl md:text-6xl font-display font-black mb-6"
                     >
-                        Neyi Hedefliyoruz?
+                        {t('title')}
                     </motion.h2>
                     <motion.p
                         initial={{ opacity: 0, y: 20 }}
@@ -26,8 +29,10 @@ export function Discover() {
                         transition={{ delay: 0.1 }}
                         className="text-foreground/50 max-w-2xl mx-auto text-xl leading-relaxed font-light"
                     >
-                        Algoritmaların sizi kutulara hapsedişine son veriyoruz. <br className="hidden md:block" />
-                        Gerçek zevklerinize hitap eden, <span className="text-primary font-medium">özgürleştirici</span> bir keşif deneyimi.
+                        {t.rich('description', {
+                            highlight: (chunks) => <span className="text-primary font-medium">{chunks}</span>,
+                            br: () => <br className="hidden md:block" />
+                        })}
                     </motion.p>
                 </div>
 
@@ -55,7 +60,7 @@ export function Discover() {
                             </svg>
                         </motion.div>
                         <div className="mt-6 text-white/60 text-[10px] font-black tracking-[0.4em] uppercase">
-                            Tanıtım Videosunu İzle
+                            {t('video.cta')}
                         </div>
                     </div>
 
@@ -66,9 +71,9 @@ export function Discover() {
                 {/* Mini Features Grid with more style */}
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-16 md:gap-8">
                     {[
-                        { icon: "📚", title: "Kişisel Kitaplık", desc: "Sadece popüler olanları değil, düşünce yapınıza en uygun eserleri keşfedin.", color: "from-blue-500/10" },
-                        { icon: "🎬", title: "Sinematik Keşif", desc: "Türler arası geçiş yapan akıllı önerilerle yeni favori dizinizi bulun.", color: "from-purple-500/10" },
-                        { icon: "🎵", title: "Müzikal Yolculuk", desc: "Ruh halinize ve derin zevklerinize hitap eden, sıradanlıktan uzak müzikler.", color: "from-orange-500/10" }
+                        { icon: "📚", title: t('features.books.title'), desc: t('features.books.desc'), color: "from-blue-500/10" },
+                        { icon: "🎬", title: t('features.movies.title'), desc: t('features.movies.desc'), color: "from-purple-500/10" },
+                        { icon: "🎵", title: t('features.music.title'), desc: t('features.music.desc'), color: "from-orange-500/10" }
                     ].map((feat, idx) => (
                         <motion.div
                             key={feat.title}

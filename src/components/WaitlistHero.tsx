@@ -4,12 +4,16 @@ import { useState, useEffect } from 'react';
 import { motion, useMotionValue, useSpring, useTransform } from 'framer-motion';
 import toast from 'react-hot-toast';
 import { Loader2, Sparkles, Send, Users } from 'lucide-react';
+import { useTranslations, useLocale } from 'next-intl';
 
 // NOT: Bu URL'i Google Apps Script'ten aldığınız URL ile değiştirin.
 // NEXT_PUBLIC_GOOGLE_SCRIPT_URL ortam değişkeni Vercel panelinden de tanımlanmalıdır.
-const GOOGLE_SCRIPT_URL = process.env.NEXT_PUBLIC_GOOGLE_SCRIPT_URL || '';
-
 export function WaitlistHero() {
+    const t = useTranslations('Hero');
+    const locale = useLocale();
+
+    const isRussian = locale === 'ru';
+
     const [email, setEmail] = useState('');
     const [loading, setLoading] = useState(false);
     const [submitted, setSubmitted] = useState(false);
@@ -100,7 +104,7 @@ export function WaitlistHero() {
     };
 
     return (
-        <section className="relative min-h-screen flex flex-col items-center justify-center px-6 overflow-hidden bg-[#0a0a0a]">
+        <section className="relative min-h-screen flex flex-col items-center justify-center px-6 pb-40 overflow-hidden bg-[#0a0a0a]">
             {/* Interactive Background Blobs */}
             <motion.div
                 style={{ x: blobX1, y: blobY1 }}
@@ -131,18 +135,23 @@ export function WaitlistHero() {
                         className="inline-flex items-center gap-2 px-5 py-2 mb-10 text-[10px] font-black tracking-[0.3em] text-primary border border-primary/20 rounded-full bg-primary/10 backdrop-blur-md uppercase shadow-[0_0_20px_rgba(139,92,246,0.1)]"
                     >
                         <Sparkles className="w-3.5 h-3.5" />
-                        Next Gen Discovery 2024
+                        {t('badge')}
                     </motion.div>
 
-                    <h1 className="text-6xl md:text-[7.5rem] font-display font-black mb-10 tracking-tighter leading-[0.85] text-white">
-                        Join the <br />
-                        <span className="bg-gradient-to-r from-primary via-purple-400 to-secondary bg-clip-text text-transparent drop-shadow-[0_0_30px_rgba(139,92,246,0.2)]">
-                            Waitlist
+                    <h1
+                        className={`font-display font-black mb-10 tracking-tighter text-white ${isRussian ? 'leading-tight' : 'text-6xl md:text-[7.5rem] leading-[0.85]'}`}
+                        style={isRussian ? { fontSize: 'clamp(2rem, 5vw, 3.5rem)' } : {}}
+                    >
+                        {t('titlePrefix')} <br />
+                        <span className={`bg-gradient-to-r from-primary via-purple-400 to-secondary bg-clip-text text-transparent drop-shadow-[0_0_30px_rgba(139,92,246,0.2)] ${isRussian ? 'whitespace-nowrap inline-block' : ''}`}>
+                            {t('titleWaitlist')}
                         </span>
                     </h1>
 
                     <p className="text-lg md:text-2xl text-foreground/40 mb-14 max-w-2xl mx-auto leading-relaxed font-light">
-                        Algoritmaların dışına çıkın. <span className="text-foreground/80 font-medium">Kitap, film ve müzik</span> zevkinizi tek bir akıllı platformda keşfedin.
+                        {t.rich('description', {
+                            highlight: (chunks) => <span className="text-foreground/80 font-medium">{chunks}</span>
+                        })}
                     </p>
 
                     {!submitted ? (
@@ -168,7 +177,7 @@ export function WaitlistHero() {
                                 <Send className="w-5 h-5 text-foreground/20 group-focus-within:text-primary transition-colors" />
                                 <input
                                     type="email"
-                                    placeholder="vip-dev@kesif.com"
+                                    placeholder={t('emailPlaceholder')}
                                     required
                                     value={email}
                                     onChange={(e) => setEmail(e.target.value)}
@@ -186,7 +195,7 @@ export function WaitlistHero() {
                                         <Loader2 className="w-6 h-6 animate-spin" />
                                     ) : (
                                         <>
-                                            Sıraya Gir
+                                            {t('cta')}
                                             <div className="w-6 h-6 bg-white/10 rounded-full flex items-center justify-center group-hover/btn:bg-white/20 transition-colors">
                                                 <span className="text-sm group-hover/btn:translate-x-0.5 transition-transform">→</span>
                                             </div>
@@ -204,9 +213,9 @@ export function WaitlistHero() {
                             <div className="w-14 h-14 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-4 shadow-glow">
                                 <Sparkles className="w-7 h-7 text-primary animate-pulse" />
                             </div>
-                            <h3 className="text-2xl font-black text-white mb-2">You're on the waitlist 🚀</h3>
+                            <h3 className="text-2xl font-black text-white mb-2">{t('successTitle')}</h3>
                             <p className="text-foreground/50 text-base leading-relaxed">
-                                Size yer ayırdık. Platform lansmanında görüşmek üzere, e-postanızı takipte kalın.
+                                {t('successMessage')}
                             </p>
                         </motion.div>
                     )}
@@ -214,7 +223,7 @@ export function WaitlistHero() {
                     <div className="mt-16 flex items-center justify-center gap-3 text-foreground/30 text-sm">
                         <Users className="w-5 h-5 text-primary/40" />
                         <span className="font-medium text-lg">
-                            Şu ana kadar <strong className="text-foreground/80 font-black">{subscriberCount !== null ? subscriberCount : '...'}</strong> kişi yerini aldı
+                            {t('countPrefix')} <strong className="text-foreground/80 font-black">{subscriberCount !== null ? subscriberCount : '...'}</strong> {t('countSuffix')}
                         </span>
                     </div>
                 </motion.div>
@@ -229,7 +238,7 @@ export function WaitlistHero() {
                 onClick={() => document.getElementById('discover')?.scrollIntoView({ behavior: 'smooth' })}
             >
                 <div className="text-[9px] uppercase tracking-[0.4em] font-black text-foreground/20 group-hover:text-primary transition-colors">
-                    Aşağı Kaydır
+                    {t('scroll')}
                 </div>
                 <div className="relative w-[1px] h-16 bg-white/[0.05]">
                     <motion.div

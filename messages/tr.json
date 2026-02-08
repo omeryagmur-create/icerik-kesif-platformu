@@ -1,0 +1,59 @@
+{
+    "Hero": {
+        "badge": "Next Gen Keşif 2024",
+        "titlePrefix": "Bekleme Listesine",
+        "titleWaitlist": "Katılın",
+        "description": "Algoritmaların dışına çıkın. <highlight>Kitap, film ve müzik</highlight> zevkinizi tek bir akıllı platformda keşfedin.",
+        "emailPlaceholder": "vip-dev@kesif.com",
+        "cta": "Sıraya Gir",
+        "successTitle": "Bekleme Listesindesiniz 🚀",
+        "successMessage": "Size yer ayırdık. Platform lansmanında görüşmek üzere, e-postanızı takipte kalın.",
+        "countPrefix": "Şu ana kadar",
+        "countSuffix": "kişi yerini aldı",
+        "scroll": "Aşağı Kaydır"
+    },
+    "Discover": {
+        "title": "Neyi Hedefliyoruz?",
+        "description": "Algoritmaların sizi kutulara hapsedişine son veriyoruz.\nGerçek zevklerinize hitap eden, <highlight>özgürleştirici</highlight> bir keşif deneyimi.",
+        "video": {
+            "cta": "Tanıtım Videosunu İzle"
+        },
+        "features": {
+            "books": {
+                "title": "Kişisel Kitaplık",
+                "desc": "Sadece popüler olanları değil, düşünce yapınıza en uygun eserleri keşfedin."
+            },
+            "movies": {
+                "title": "Sinematik Keşif",
+                "desc": "Türler arası geçiş yapan akıllı önerilerle yeni favori dizinizi bulun."
+            },
+            "music": {
+                "title": "Müzikal Yolculuk",
+                "desc": "Ruh halinize ve derin zevklerinize hitap eden, sıradanlıktan uzak müzikler."
+            }
+        }
+    },
+    "Support": {
+        "title": "Bağımsız Geliştiriciye Destek Ol",
+        "description": "Bu proje reklamlar veya büyük sermayelerle değil, topluluk desteği ve tutkuyla geliştiriliyor. Her kahve bağışı, geliştirme sürecini hızlandırıyor ve platformun daha kaliteli özelliklere sahip olmasını sağlıyor.",
+        "features": {
+            "dev": "Geliştirme sürecine dahil olabilirsiniz",
+            "beta": "Lansman öncesi beta testlerine katılın"
+        },
+        "coffee": {
+            "title": "Bir Kahve Ismarla",
+            "desc": "Destek olmak için Buy Me a Coffee platformunu kullanabilirsiniz.",
+            "cta": "Destek Ol (Coffee)"
+        }
+    },
+    "Footer": {
+        "rights": "© 2026. Tüm hakları saklıdır.",
+        "brand": "İçerik Keşif Platformu",
+        "links": {
+            "twitter": "Twitter (X)",
+            "instagram": "Instagram",
+            "discord": "Discord",
+            "privacy": "Gizlilik"
+        }
+    }
+}

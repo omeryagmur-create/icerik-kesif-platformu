@@ -33,6 +33,8 @@ export function WaitlistHero() {
             const data = await response.json();
             if (data && typeof data.count === 'number') {
                 setSubscriberCount(data.count);
+            } else {
+                console.warn('WaitlistHero: Count data missing in response:', data);
             }
         } catch (error) {
             console.error('WaitlistHero: Count fetch failed:', error);

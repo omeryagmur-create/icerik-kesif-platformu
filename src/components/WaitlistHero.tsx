@@ -6,6 +6,7 @@ import toast from 'react-hot-toast';
 import { Loader2, Sparkles, Send, Users } from 'lucide-react';
 
 // NOT: Bu URL'i Google Apps Script'ten aldığınız URL ile değiştirin.
+// NEXT_PUBLIC_GOOGLE_SCRIPT_URL ortam değişkeni Vercel panelinden de tanımlanmalıdır.
 const GOOGLE_SCRIPT_URL = process.env.NEXT_PUBLIC_GOOGLE_SCRIPT_URL || '';
 
 export function WaitlistHero() {

@@ -14,7 +14,7 @@ export async function GET() {
     if (exists) {
         try {
             content = JSON.parse(readFileSync(ruPath, 'utf8'));
-        } catch (e) {
+        } catch (e: any) {
             error = e.message;
         }
     }

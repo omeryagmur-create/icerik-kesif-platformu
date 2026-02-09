@@ -1,10 +1,10 @@
 {
     "Hero": {
-        "badge": "Next Gen Keşif 2024",
+        "badge": "Five More Minutes Premium",
         "titlePrefix": "Bekleme Listesine",
         "titleWaitlist": "Katılın",
         "description": "Algoritmaların dışına çıkın. <highlight>Kitap, film ve müzik</highlight> zevkinizi tek bir akıllı platformda keşfedin.",
-        "emailPlaceholder": "vip-dev@kesif.com",
+        "emailPlaceholder": "hello@fivemoreminutes.com",
         "cta": "Sıraya Gir",
         "successTitle": "Bekleme Listesindesiniz 🚀",
         "successMessage": "Size yer ayırdık. Platform lansmanında görüşmek üzere, e-postanızı takipte kalın.",
@@ -48,7 +48,7 @@
     },
     "Footer": {
         "rights": "© 2026. Tüm hakları saklıdır.",
-        "brand": "İçerik Keşif Platformu",
+        "brand": "Five More Minutes",
         "links": {
             "twitter": "Twitter (X)",
             "instagram": "Instagram",

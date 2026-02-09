@@ -13,8 +13,8 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-  title: "İçerik Keşif Platformu - Erken Erişim",
-  description: "Tek bir yerden kitap, dizi, film ve müzik keşfet. Zevkine göre öneriler, zaman kaybı yok.",
+  title: "Five More Minutes - Erken Erişim",
+  description: "Bize katılın ve yeni içerikler keşfedin. Five More Minutes ile her saniye değerli.",
 };
 
 import { NextIntlClientProvider } from 'next-intl';

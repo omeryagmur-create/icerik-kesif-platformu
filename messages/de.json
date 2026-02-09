@@ -1,10 +1,10 @@
 {
     "Hero": {
-        "badge": "Next Gen Entdeckung 2024",
+        "badge": "Five More Minutes Premium",
         "titlePrefix": "Treten Sie der",
         "titleWaitlist": "Warteliste bei",
         "description": "Gehen Sie über Algorithmen hinaus. Entdecken Sie Ihren <highlight>Buch-, Film- und Musikgeschmack</highlight> auf einer einzigen intelligenten Plattform.",
-        "emailPlaceholder": "vip-dev@discovery.com",
+        "emailPlaceholder": "hello@fivemoreminutes.com",
         "cta": "Warteliste beitreten",
         "successTitle": "Sie sind auf der Warteliste 🚀",
         "successMessage": "Wir haben Ihren Platz reserviert. Bleiben Sie dran für den Plattformstart.",
@@ -48,7 +48,7 @@
     },
     "Footer": {
         "rights": "© 2026. Alle Rechte vorbehalten.",
-        "brand": "Content Discovery Plattform",
+        "brand": "Five More Minutes",
         "links": {
             "twitter": "Twitter (X)",
             "instagram": "Instagram",

@@ -130,16 +130,6 @@ export function WaitlistHero() {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 1, ease: "easeOut" }}
                 >
-                    <motion.div
-                        initial={{ opacity: 0, scale: 0.9 }}
-                        animate={{ opacity: 1, scale: 1 }}
-                        transition={{ delay: 0.2 }}
-                        className="inline-flex items-center gap-2 px-5 py-2 mb-10 text-[10px] font-black tracking-[0.3em] text-primary border border-primary/20 rounded-full bg-primary/10 backdrop-blur-md uppercase shadow-[0_0_20px_rgba(139,92,246,0.1)]"
-                    >
-                        <Sparkles className="w-3.5 h-3.5" />
-                        {t('badge')}
-                    </motion.div>
-
                     <h1
                         className={`font-display font-black mb-10 tracking-tighter text-white ${isRussian ? 'leading-tight' : 'text-6xl md:text-[7.5rem] leading-[0.85]'}`}
                         style={isRussian ? { fontSize: 'clamp(2rem, 5vw, 3.5rem)' } : {}}
